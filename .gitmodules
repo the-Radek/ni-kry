@@ -1,0 +1,3 @@
+[submodule "01-rng/sts"]
+	path = 01-rng/sts
+	url = https://github.com/arcetri/sts
