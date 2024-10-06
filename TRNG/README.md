@@ -10,13 +10,18 @@ Pro testování bude požit [NIST Statistical Test Suite](https://github.com/arc
 
 Testované sekvence bitů mají délku 5 400 000. Výchozí délka jednoho testovaného bitstreamu je 1024 \* 1024 a neměla by být kratší než 1 000 000. Ponechal jsem výchozí délku bitstreamu a nastavil jsem počet iterací na 5. Tedy 5 \* 1024 \* 1024 <= 5 400 000.
 
-Testování tedy porbíhalo spuštením následujícího příkazu. Přepínač `-F a` nastavuje formát vstupních dat na ASCII '0'/'1'. Přepínač `-i 5` nastavuje 5 iterací.
+Testování tedy porbíhalo spuštením následujícího příkazu. Přepínač `-F a` nastavuje formát vstupních dat na ASCII '0'/'1'. Přepínač `-i 5` nastavuje 5 iterací. Přepínač `-s` vygeneruje výstupní statistiky použity pro jednotlivé testy.
 
 ```sh
-./sts -i 5 -F a ../data-0.txt
+cd results/0/
+../../sts/sts -i 5 -F a -s ../../data-0.txt
 ```
 
-Výsledky testování jsou uloženy ve složce `results/` pro každý bitstream zvlášť.
+Automatizováno v souboru `results/test.sh`.
+
+## Výsledky
+
+Výsledky testování jsou uloženy ve složce `results/` pro každý bitstream zvlášť. Výsledky byly zpracovány v python notebooku `results.ipynb`. Úspěšnost jednotlivých testů je znázorněno tabulkou a rozdělení p-hodnoty je znázorněno histogramy.
 
 ## Závěr
 
