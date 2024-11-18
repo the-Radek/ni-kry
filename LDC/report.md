@@ -1,6 +1,6 @@
 ## Linear cryptanalysis
 
-obrázek
+![diagram lineární aproximace](linear.jpg)
 
 | S-box | input | output | bias |
 | ----- | ----- | ------ | ---- |
@@ -21,7 +21,7 @@ Analýza byla spuštěna na plaintext/ciphertext s klíčem 0xBEAF a o velikosti
 
 ## Differential cryptanalysis
 
-obrázek
+![diagram diferenciálních charakteristik](differential.jpg)
 
 | S-box | input | output | propability |
 | ----- | ----- | ------ | ----------- |
